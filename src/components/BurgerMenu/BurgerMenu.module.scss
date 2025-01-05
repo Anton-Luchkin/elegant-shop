@@ -1,0 +1,82 @@
+@use '../../index.scss' as *;
+
+.burgerButton {
+  @include reset-button;
+  @include square(40px);
+
+  position: relative;
+  transition: all var(--transition-duration);
+
+  @include hover {
+    background-color: var(--accent-color);
+  }
+
+  &::after,
+  &::before {
+    @include abs-center;
+
+    content: '';
+    width: 50%;
+    height: 2px;
+    background-color: var(--accent-color);
+    border-radius: 5px;
+    transition: transform var(--transition-duration), opacity var(--transition-duration);
+  }
+
+  &::before {
+    box-shadow: 0 -8px var(--accent-color);
+  }
+
+  &::after {
+    box-shadow: 0 8px var(--accent-color);
+  }
+
+  /* Активное состояние для превращения в крестик */
+  &.isActive {
+    background-color: transparent; /* Убираем фон при активации */
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      box-shadow: none;
+    }
+  }
+}
+
+.mobileOverlay {
+  position: absolute;
+  top: calc(var(--body-padding-top-mobile) + 1px);
+  left: 0;
+  width: 100%;
+  height: calc(100vh - var(--body-padding-top-mobile) - 1px); /* Учитываем высоту хедера */
+  margin: 0;
+  border: none;
+	background-color: var(--background-color-dark);
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+
+	&.isVisible {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+  &__list {
+    @include flex-center;
+
+    flex-direction: column;
+    row-gap: 30px;
+    min-height: 80vh;
+  }
+
+  &__link {
+    font-family: var(--font-family-link);
+    font-size: 22px;
+    font-weight: 700;
+		color: var(--accent-color);
+  }
+}

@@ -1,0 +1,38 @@
+@forward './styles/normalize';
+@forward './styles/variables';
+@forward './styles/mixins';
+@forward './styles/globals';
+@forward './styles/utils';
+@forward './styles/media';
+
+@font-face {
+  font-family: 'Charm';
+  src: url('./assets/fonts/Charm-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Charm';
+  src: url('./assets/fonts/Charm-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

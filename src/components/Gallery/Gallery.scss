@@ -1,0 +1,24 @@
+@use '../../index.scss' as *;
+
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+	height: 85vh !important;
+
+  @include mobile {
+    height: 62vh !important;
+  }
+}
+
+video {
+  height: 85vh !important;
+  margin: 0 auto;
+
+  @include mobile {
+    height: 62vh !important;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .image-gallery-icon:hover {
+      color: var(--accent-color);
+  }
+}

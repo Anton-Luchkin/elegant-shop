@@ -1,0 +1,56 @@
+@use '../../index.scss' as *;
+
+.button {
+	@include flex-center(true);
+
+	position: relative;
+	overflow: hidden;
+	padding-block: 8px;
+	padding-inline: 12px;
+	border: 1px solid var(--light-color);
+	background-color: var(--muted-color);
+
+	&:hover {
+		border-color:  var(--accent-color);
+	}
+
+	& span {
+		position: relative;
+		font-family: var(--font-family-link);
+		color: var(--light-color);
+		z-index: 1;
+	}
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 50%; 
+		background-color: var(--base-color); 
+		transition: transform 0.3s ease-in-out;
+	}
+
+	&:before {
+		bottom: 50%;
+	}
+
+	&:after {
+		top: auto;
+		bottom: 0;
+	}
+
+	&:hover:before {
+		transform: translateY(
+			-15px
+		); 
+	}
+
+	&:hover:after {
+		transform: translateY(
+			+15px
+		);
+	}
+}

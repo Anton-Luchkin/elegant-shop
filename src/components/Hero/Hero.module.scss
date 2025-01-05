@@ -1,0 +1,128 @@
+@use '../../index.scss' as *;
+
+.hero {
+	position: relative;
+	width: 100%;
+	height: calc(
+		100vh - var(--body-padding-top-desktop)
+	);
+	overflow: hidden;
+
+	@include tablet {
+		height: calc(100vh - var(--body-padding-top-mobile));
+	}
+
+	// slider
+	&__slideshow {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+	}
+
+	&__slideshowItem {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		opacity: 0;
+		animation: slideanim 40s infinite;
+	}
+
+	&__slideshowItem:nth-child(1),
+	&__slideshowItem:nth-child(1) img {
+		animation-delay: 0;
+	}
+
+	&__slideshowItem:nth-child(2),
+	&__slideshowItem:nth-child(2) img {
+		animation-delay: 10s;
+	}
+	&__slideshowItem:nth-child(3),
+	&__slideshowItem:nth-child(3) img {
+		animation-delay: 20s;
+	}
+	&__slideshowItem:nth-child(4),
+	&__slideshowItem:nth-child(4) img {
+		animation-delay: 30s;
+	}
+	&__slideshowItem img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		animation: zoom 40s infinite;
+	}
+
+	// text
+	&__titleContainer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		padding-block: 120px;
+		background-color: transparent;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		row-gap: 10px;
+		width: 50%;
+		padding-inline: 20px;
+		text-align: right;
+
+		@include tablet {
+			width: 100%;
+			padding-inline: 10px;
+			text-align: center;
+		}
+	}
+
+	&__subtitle {
+		@include fluid-text(35, 22);
+
+		color: var(--dark-color);
+	}
+
+	&__title {
+		@include fluid-text(90, 50);
+
+		margin-bottom: 40px;
+		text-transform: uppercase;
+		color: var(--accent-color);
+	}
+
+	&__btnContainer{
+		display: flex;
+		gap: 10px;
+		align-items: center;
+		justify-content: end;
+
+		@include tablet {
+			justify-content: center;
+		}
+	}
+
+	&__btnCatalog,
+	&__btnContact {
+		opacity: 0.75;
+	}
+}
+
+@keyframes slideanim {
+	12.5% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 1;
+	}
+	37.5% {
+		opacity: 0;
+	}
+}
+@keyframes zoom {
+	50% {
+		transform: scale(1.3);
+	}
+}
