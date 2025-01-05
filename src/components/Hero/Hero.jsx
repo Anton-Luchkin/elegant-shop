@@ -6,16 +6,16 @@ function Hero() {
 		<section className={s.hero}>
 			<div className={s.hero__slideshow}>
 				<div className={s.hero__slideshowItem}>
-					<img src="src/assets/images/hero/hero-1.jpg" alt="hero-img" />
+					<img src="/assets/images/hero/hero-1.jpg" alt="hero-img" />
 				</div>
 				<div className={s.hero__slideshowItem}>
-					<img src="src/assets/images/hero/hero-2.jpg" alt="hero-img" />
+					<img src="/assets/images/hero/hero-2.jpg" alt="hero-img" />
 				</div>
 				<div className={s.hero__slideshowItem}>
-					<img src="src/assets/images/hero/hero-3.jpg" alt="hero-img" />
+					<img src="/assets/images/hero/hero-3.jpg" alt="hero-img" />
 				</div>
 				<div className={s.hero__slideshowItem}>
-					<img src="src/assets/images/hero/hero-4.jpg" alt="hero-img" />
+					<img src="/assets/images/hero/hero-4.jpg" alt="hero-img" />
 				</div>
 			</div>
 
