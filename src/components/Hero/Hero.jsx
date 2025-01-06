@@ -4,7 +4,7 @@ import s from './Hero.module.scss'
 function Hero() {
 	return (
 		<section className={s.hero}>
-			<div className={s.hero__slideshow}>
+			<div className={`${s.hero__slideshow} hidden-mobile`}>
 				<div className={s.hero__slideshowItem}>
 					<img src="assets/images/hero/hero-1.jpg" alt="hero-img" />
 				</div>
@@ -12,10 +12,24 @@ function Hero() {
 					<img src="assets/images/hero/hero-2.jpg" alt="hero-img" />
 				</div>
 				<div className={s.hero__slideshowItem}>
-					<img src="assets/images/hero/hero-3.jpg" alt="hero-img" />
+					<img src="assets/images/hero/hero-33.jpg" alt="hero-img" />
 				</div>
 				<div className={s.hero__slideshowItem}>
 					<img src="assets/images/hero/hero-4.jpg" alt="hero-img" />
+				</div>
+			</div>
+			<div className={`${s.hero__slideshow} visible-mobile`}>
+				<div className={s.hero__slideshowItem}>
+					<img src="assets/images/hero/hero-1mob.jpg" alt="hero-img" />
+				</div>
+				<div className={s.hero__slideshowItem}>
+					<img src="assets/images/hero/hero-2mob.jpg" alt="hero-img" />
+				</div>
+				<div className={s.hero__slideshowItem}>
+					<img src="assets/images/hero/hero-3mob.jpg" alt="hero-img" />
+				</div>
+				<div className={s.hero__slideshowItem}>
+					<img src="assets/images/hero/hero-4mob.jpg" alt="hero-img" />
 				</div>
 			</div>
 
