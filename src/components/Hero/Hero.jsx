@@ -36,7 +36,7 @@ function Hero() {
 			<div className={s.hero__titleContainer}>
 				<div className={s.hero__content}>
 					<p className={s.hero__subtitle}>We Are Worth Your Attention</p>
-					<h1 className={s.hero__title}>Elegant Wedding <br /> Dress Shop</h1>
+					<h1 className={s.hero__title}>Elegant Wedding <br /> Dress Atelier</h1>
 					<div className={s.hero__btnContainer}>
 						<a href="#catalog">
 							<Button text={'Go to Catalog'} style={`${s.hero__btnCatalog}`} />

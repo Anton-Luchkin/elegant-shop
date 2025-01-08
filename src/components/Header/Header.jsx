@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 import BurgerMenu from '../BurgerMenu/BurgerMenu'
-import logo from "../../assets/images/logo.svg";
+import logo from '../../assets/images/logo.svg'
 import s from './Header.module.scss'
 
 function Header() {
@@ -40,7 +40,7 @@ function Header() {
 					<img src={logo} alt="logo" className={s.header__logoImg} />
 					<p className={s.header__logoText}>
 						Elegant <span className={`accent`}>Wedding</span> Dress
-						<span className={`accent`}>Shop</span>
+						<span className={`accent`}> Atelier</span>
 					</p>
 				</a>
 				<nav className={`${s.header__nav} hidden-mobile`}>
