@@ -17,11 +17,6 @@
 	display: flex;
 	column-gap: 15px;
 	align-items: center;
-
-	@include mobile {
-		flex-direction: column;
-    row-gap: 10px;
-	}
 }
 
 .form__label {

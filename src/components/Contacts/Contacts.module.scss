@@ -8,7 +8,7 @@
 
 	@include mobile {
     height: 100vh;
-		padding-bottom: 30px;
+		padding-block: var(--body-padding-top-mobile);
 	}
 
 	&__container {
