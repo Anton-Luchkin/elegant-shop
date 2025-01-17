@@ -18,21 +18,21 @@ const EmailForm = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		emailjs
-			.send(
-				'YOUR_SERVICE_ID', // ID сервиса
-				'YOUR_TEMPLATE_ID', // ID шаблона
-				formData,
-				'YOUR_USER_ID' // ID пользователя
-			)
-			.then(
-				() => {
-					alert('Email sent successfully!')
-				},
-				(error) => {
-					alert('Failed to send email.')
-					console.error(error)
-				}
-			)
+		.send(
+			import.meta.env.VITE_EMAILJS_SERVICE_ID,
+			import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+			formData,
+			import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+		)
+		.then(
+			(result) => {
+				console.log("Email sent successfully:", result.text);
+			},
+			(error) => {
+				console.error("Error sending email:", error);
+			}
+		);
+	
 	}
 
 	return (

@@ -21,8 +21,9 @@ function Contacts() {
 						<ul className={s.contacts__socialsList}>
 							<li className={s.contacts__socialsItem}>
 								<a
-									href="#"
+									href="https://www.facebook.com/ElegantWeddingDressAtelier"
 									className={`${s.contacts__socialsLink} hover-effect`}
+									target='_blank'
 								>
 									<img src={facebook} alt="facebook-icon" />
 									<span>Facebook</span>
@@ -30,8 +31,9 @@ function Contacts() {
 							</li>
 							<li className={s.contacts__socialsItem}>
 								<a
-									href="#"
+									href="https://www.instagram.com/elegant.wedding.dress.atelier?igsh=YjU2b2lkbmV0eGk1"
 									className={`${s.contacts__socialsLink} hover-effect`}
+									target='_blank'
 								>
 									<img src={instagram} alt="instagram-icon" />
 									<span>Instagram</span>
@@ -39,8 +41,9 @@ function Contacts() {
 							</li>
 							<li className={s.contacts__socialsItem}>
 								<a
-									href="#"
+									href="https://wa.me/380973511437"
 									className={`${s.contacts__socialsLink} hover-effect`}
+									target='_blank'
 								>
 									<img src={whatsApp} alt="whatsApp-icon" />
 									<span>WhatsApp</span>
